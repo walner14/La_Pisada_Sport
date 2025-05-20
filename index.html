@@ -359,6 +359,20 @@
             margin-top: 40px; /* <-- Este es el espaciado */
         }
 
+ /* Responsive para móviles */
+    @media screen and (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      aside.sidebar-left,
+      aside.sidebar-right,
+      main.contenido {
+        width: 100%;
+      }
+    }
+
+       
     </style>
 
 </head>
