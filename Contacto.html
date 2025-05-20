@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!--CSS-->
+</head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li a.active {
+            background-color: #fff;
+            color: red;
+        }
+
+        .menu li a {
+            color: rgb(235, 10, 10);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+                /* Efecto al pasar el mouse */
+
+        .menu li a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 600px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+            width: 20%;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 4px rgba(0,0,0,0.1);
+        }
+
+        .contenido {
+            flex: 1;
+            padding: 15px;
+            margin: 0 10px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px 0;
+        }
+
+        .slider-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+
+        .slider-track img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+
+        .carrito {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .carrito a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .carrito .contador {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 2px 6px;
+        }
+
+            @keyframes scroll {
+            0% {
+            transform: translateX(0);
+            }
+            100% {
+            transform: translateX(-50%);
+            }
+        }
+        header {
+            background-color: #040000;
+            color: #fff;
+            padding: 05px 05px;
+            text-align: right;
+            position:relative;
+        }
+        .logo-container {
+            text-align: right;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0px 0 0px 0;
+            text-align: center;
+        }
+
+        nav li {
+             display: inline-block;
+            margin: 0 13px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 7px;
+            width: 200px;
+            border-radius: 4px;
+            border: none;
+            
+        }
+
+        .search-bar button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: darkred;
+        }
+
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            flex: 20px;
+            box-sizing: border-box;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .social-icons a {
+            color: red;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 32px; /* Tamaño más grande */
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2); /* Efecto al pasar el mouse */
+        }
+
+       footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            width: 100%;
+            margin-top: 40px; /* <-- Este es el espaciado */
+        }
+
+.formulario-contacto {
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #d10000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.whatsapp-contacto {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.whatsapp-contacto a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #25D366;
+  background-color: #eaffea;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-contacto a:hover {
+  background-color: #d6f5d6;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <div class="carrito">
+                    <a href="carrito.html" aria-label="Ver carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="contador">3</span>
+                 </a>
+        </div>
+
+        <div class="logo-container"></div>
+        
+        <nav class="menu-buscador">
+
+            <ul class="menu">
+                <img src="img/La_Pisada_Sport.png" alt="Logo La Pisada"style="height: 150px;">
+
+               
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="Contacto.html"class="active">Contacto</a></li>
+                <li><a href="Ofertas.html">Ofertas</a></li>
+                <li><a href="Envios.html">Envios</a></li>
+                <li>  
+                    <form class="search-bar">
+                        <input type="text" placeholder="Buscar productos...">
+                        <button type="submit">Buscar</button>
+                    </form></li>
+            </ul>    
+        </nav>
+  
+    </header>
+
+<section class="formulario-contacto">
+  <h2>Envíanos un mensaje</h2>
+  <form action="#" method="post" class="contact-form">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo" required><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
+
+
+        <div class="whatsapp-contacto">
+            <a href="https://wa.me/18095555555" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+            Escríbenos por WhatsApp</a>
+        </div>
+
+
+
+
+    <footer>
+    <p>&copy; 2025 Tienda en Línea</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16RB1waKP5/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.threads.com/@walnersanchez?igshid=NTc4MTIwNjQ2YQ==" target="_blank" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+      <a href="https://www.instagram.com/invites/contact/?igsh=1743u56ahr1fc&utm_content=ak8sis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1+8098354444" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    </footer>
+
+</body>
+</html>
+
+
